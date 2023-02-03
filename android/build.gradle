@@ -12,6 +12,7 @@ allprojects {
 
 
 buildscript {
+    ext.kotlin_version = '1.6.20'
     repositories {
         google()
         mavenCentral()
@@ -19,6 +20,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -62,5 +64,6 @@ repositories {
 dependencies {
     implementation "com.facebook.react:react-native:+"
     implementation "com.plaid.link:sdk-core:3.10.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "com.jakewharton.rxrelay2:rxrelay:2.1.1"
 }
